@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Desafio FrontEnd - TodoList </title>
+</head>
+<body>
+    <!-- APP -->
+    <div id="app">
+        <!-- NAV -->
+        <nav>
+            <ul class="tabs">
+                <li class="active" id="N">
+                    <a hfer='#' data-tabindex="0" title="NÃO FEITAS" onclick="abas(0);">NÃO FEITAS</a>
+                </li>
+                <li id="F">
+                    <a hfer="#" data-tabindex="1" title="FEITAS" onclick="abas(1);">FEITAS</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- END NAV -->
+
+        <!-- CONTEUDOTAB -->
+        <div id="conteudoTab">
+            <!-- NÃO FEITAS -->
+            <section id="naoFeitas" class="active">
+                <ul id="naoF">
+                    </ul>
+                <div id="form">
+                    <form id="formAdicionarTarefa" action="#" method="get" accept-charset="UTF-8" onsubmit="return false">
+                        <textarea name="descricao" placeholder="Insira uma tarefa" oninput="contador();" onkeydown="contador();"></textarea>
+                        <button type="submit" class="btn-disable" id="enviar" onclick ="addTarefa();">Adicionar</button>
+                        <span id="erro">Chegou no limite amiguinho!</span>
+                        <span id="contador">140</span>
+                    </form>
+                </div>
+            </section>
+            <!-- END NÃO FEITAS -->
+
+            <!-- FEITAS -->
+            <section id="feitas">
+                <ul id="f">
+                    </ul>
+            </section>
+            <!-- END FEITAS -->
+        </div>
+        <!-- END CONTEUDOTAB-->
+    </div>
+    <!-- END APP -->
+    <script src="script.js"></script>
+</body>
+</html>
